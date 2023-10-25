@@ -3,7 +3,7 @@ import './SideAnimation.css'
 const SideAnimation = () => {
     return (
         <div>
-            <div className="relative lg:w-[646px] lg:h-[646px] w-[400px] h-[400px] aos-init aos-animate bg1">
+            <div className="relative lg:w-[646px] lg:h-[646px] w-[400px] h-[400px] aos-init aos-animate bg1 ">
     <div className="partners-intro--partners">
         <div className="partners-intro--partners-item -pos-1">
             <img className="lazy loaded rounded-full" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtU6sGWtWlnyQhF5sxSLvnM98ZoWrHuFOsxQ&usqp=CAU" alt="" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtU6sGWtWlnyQhF5sxSLvnM98ZoWrHuFOsxQ&usqp=CAU" data-was-processed="true"/>
@@ -38,7 +38,7 @@ const SideAnimation = () => {
         </div>
     </div>
 
-    <div className="partners-intro--logo">
+    <div className="partners-intro--logo ">
         <img className="lazy loaded rounded-full" data-src="https://i.ibb.co/0FXn77Q/40752.jpg" alt="" src="https://i.ibb.co/0FXn77Q/40752.jpg" data-was-processed="true"/>
     </div>
 </div> 

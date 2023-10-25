@@ -1,0 +1,25 @@
+
+
+  .box {
+   
+    background-color: white;
+    position: absolute;
+    top: 240px;
+    animation: slideDown 3s forwards;
+    z-index: 1;
+    transition: height 1s ease;
+    
+    
+  } 
+  
+  @keyframes slideDown {
+    from {
+      top: 200px;
+    }
+    to {
+      top: 250px;
+    }
+  }
+  
+ 
+  

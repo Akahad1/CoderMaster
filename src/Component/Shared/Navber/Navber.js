@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Navber.css'
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../AuthProvider/AuthProvider';
 
 const Navber = () => {
+  const {logOut,user}=useContext(AuthContext)
+
+  const logoutHandler=()=>{
+    logOut()
+    .then(()=>{})
+    .then(error=>console.log(error))
+
+  }
     return (
         <div className=''>
             <div className="navbar bg-slate-800 ">
@@ -19,9 +28,14 @@ const Navber = () => {
         <li className='text-white' ><Link to='/Blogs'>Blogs</Link></li>
         <li className='text-white'><Link to='/aboutus'>About Us</Link>
         </li>
-        <li className='text-white' ><Link to='/singup'>Register</Link></li>
+        {
+          user?.uid?<button onClick={logoutHandler} className='text-white'>
+          Log Out
+         </button>:<>
+         <li className='text-white' ><Link to='/singup'>Register</Link></li>
         <li className='text-white' ><Link to='/login'>Login</Link></li>
-        <li  className='text-white'><Link to='/logout'>Log Out</Link></li>
+         </>
+        }
       </div>
 
         </div>
@@ -29,7 +43,7 @@ const Navber = () => {
       </ul>
     </div>
     {/* lg: */}
-    <a className="btn btn-ghost normal-case text-xl text-white">daisyUI</a>
+    <a className="btn btn-ghost normal-case text-xl text-white">Coder Master</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -38,14 +52,32 @@ const Navber = () => {
         <li className='text-white' ><Link to='/Blogs'>Blogs</Link></li>
         <li className='text-white'><Link to='/aboutus'>About Us</Link>
         </li>
-        <li className='text-white' ><Link to='/singup'>Register</Link></li>
+        
+        {
+          user?.uid?<button onClick={logoutHandler} className='text-white'>
+          Log Out
+         </button>:<>
+         <li className='text-white' ><Link to='/singup'>Register</Link></li>
         <li className='text-white' ><Link to='/login'>Login</Link></li>
-        <li  className='text-white'><Link to='/logout'>Log Out</Link></li>
+         </>
+        }
     </ul>
   </div>
   
   <div className="navbar-end">
-    <a className="btn">Button</a>
+    
+    
+   {
+    user?.uid?<> <div className="avatar online">
+    <div className="w-16 rounded-full mr-3">
+      <img src={user?.photoURL} className='w-12 h-12 ' alt=''/>
+    </div>
+  </div>
+  <p className='text-white'>{user?.displayName}</p>
+  </>
+  :''
+   }
+  
   </div>
 </div>
         </div>

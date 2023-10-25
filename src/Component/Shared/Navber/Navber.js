@@ -69,11 +69,11 @@ const Navber = () => {
     
    {
     user?.uid?<> <div className="avatar online">
-    <div className="w-16 rounded-full mr-3">
-      <img src={user?.photoURL} className='w-12 h-12 ' alt=''/>
+    <div className="w-12 rounded-full mr-3">
+      <img src={user?.photoURL} className='w-8 h-12 ' alt=''/>
     </div>
   </div>
-  <p className='text-white'>{user?.displayName}</p>
+  <p className='text-white hidden lg:inline'>{user?.displayName}</p>
   </>
   :''
    }

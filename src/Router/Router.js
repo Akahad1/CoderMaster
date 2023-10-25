@@ -6,6 +6,7 @@ import Blogs from "../Component/Pages/Blogs/Blogs";
 import SpecificCoures from "../Component/Pages/Course/SpecificCoures/SpecificCoures";
 import SingUp from "../Component/Authentication/SingUp/SingUp";
 import Singin from "../Component/Authentication/Singin/Singin";
+import AboutUs from "../Component/Pages/AboutUs/AboutUs";
 
 
 
@@ -18,7 +19,8 @@ const router =createBrowserRouter([
         loader:async({params})=>fetch(`http://localhost:5000/allcoures/${params.id}`)
     },
     {path:'/singup',element:<SingUp></SingUp>},
-    {path:'/login',element:<Singin></Singin>}
+    {path:'/login',element:<Singin></Singin>},
+    {path:'/aboutus',element:<AboutUs></AboutUs>}
     ]}
 ])
 

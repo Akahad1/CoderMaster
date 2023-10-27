@@ -1,4 +1,6 @@
 import React from 'react';
+import { BsFacebook } from 'react-icons/bs';
+import { AiOutlineInstagram ,AiFillLinkedin} from 'react-icons/ai';
 
 const ShowInstactor = ({instactor}) => {
    
@@ -15,7 +17,14 @@ const ShowInstactor = ({instactor}) => {
   </div>
   <p className=' text-center text-white text-xl mt-3'>{name}</p>
     <p className='text-center text-white'>{positon}</p>
+    <div className='flex justify-center mt-2'>
+                <BsFacebook className='inline text-white w-5  h-5'/>
+                <AiOutlineInstagram className='inline ml-2 mr-2 text-white w-5 h-5'/>
+                <AiFillLinkedin className='inline text-white w-5 h-5'/>
+
             </div>
+            </div>
+            
             </div>
             
         </div>

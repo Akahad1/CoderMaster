@@ -1,42 +1,22 @@
 import React, { useState } from 'react';
 import './ShowCartCoures.css'
+import { Link } from 'react-router-dom';
 
 const ShowCartCoures = ({course}) => {
-    const {name,img,titel,id,body}=course;
+    const {name,img,titel,codeid,body}=course;
     const [isHovered, setIsHovered] = useState(false);
   
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
     return (
-        <div>
-             <div
-      onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}
-     
-    >
-      <div className="card bg-slate-600   shadow-xl ml-5 mt-10 mr-3">
-  <figure><img className='w-80 h-60' src={img} alt="" /></figure>
-
-  <div className={`${isHovered?" box bg-white p-10" :'hidden'}`}>
-    <h2 className="card-title ">
-    {name}
-     
-    </h2>
-    <p>{titel}</p>
-    <div className="card-actions justify-end">
-      <div className="badge badge-outline">Fashion</div> 
-      <div className="badge badge-outline">Products</div>
+      <div className="image-card lg:h-72 lg:w-80 md:w-72 md:h-72  w-52 h-52 mt-10 rounded-2xl bg-slate-600">
+      <img src={img} alt='' className='' />
+      <div className="title-box">
+        <p className='text-black text-2xl'>{name}</p>
+        <p className='text-black'>{titel}</p>
+        <Link to={`/allcoures/${codeid}`}><button className='btn  mb-2 btn-xs mt-2 btn-primary'> Show Details</button></Link>
+        
+      </div>
     </div>
-  </div>
-</div>
-    </div>
-            
-        </div>
     );
 };
 

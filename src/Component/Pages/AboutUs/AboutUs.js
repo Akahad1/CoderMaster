@@ -9,7 +9,7 @@ const AboutUs = () => {
         .then(res=>res.json())
     })
     return (
-        <div className='min-h-screen grid bg-gradient-to-b from-black to-gray-800 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 '>
+        <div className='min-h-screen grid bg-gradient-to-b from-black to-gray-800 pt-10 pb-10 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 '>
             {
                 instactors.map(instactor=><ShowInstactor
                 instactor={instactor}

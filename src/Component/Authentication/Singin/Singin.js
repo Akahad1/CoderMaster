@@ -66,7 +66,7 @@ const Singin = () => {
      </div>
      
      <div className="form-control mt-6">
-       <button type='submit' className="btn bg-fuchsia-500 text-white">Log In</button>
+       <button type='submit' className="btn btn-primary text-white">Log In</button>
        <ToastContainer />
      </div>
      </form>

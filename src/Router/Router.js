@@ -7,6 +7,7 @@ import SpecificCoures from "../Component/Pages/Course/SpecificCoures/SpecificCou
 import SingUp from "../Component/Authentication/SingUp/SingUp";
 import Singin from "../Component/Authentication/Singin/Singin";
 import AboutUs from "../Component/Pages/AboutUs/AboutUs";
+import Orders from "../Component/Pages/Orders/Orders";
 
 
 
@@ -20,7 +21,8 @@ const router =createBrowserRouter([
     },
     {path:'/singup',element:<SingUp></SingUp>},
     {path:'/login',element:<Singin></Singin>},
-    {path:'/aboutus',element:<AboutUs></AboutUs>}
+    {path:'/aboutus',element:<AboutUs></AboutUs>},
+    {path:'/checkout',element:<Orders></Orders>}
     ]}
 ])
 

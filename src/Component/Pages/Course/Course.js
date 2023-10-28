@@ -2,17 +2,22 @@ import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import ShowCartCoures from './ShowCartCoures/ShowCartCoures';
 import { Link } from 'react-router-dom';
+import Loader from '../../Hook/Loader';
 
 
 
 const Course = () => {
-    
-    const {data:allcoures=[]}=useQuery({
+      
+    const {data:allcoures=[],isLoading}=useQuery({
         queryKey:['allcoures'],
         queryFn: ()=>fetch('http://localhost:5000/allcoures')
         .then(res=>res.json())
         
     })
+
+    if(isLoading){
+        return <Loader></Loader>
+    }
     return (
         <div className='bg-gradient-to-b from-black to-gray-800 min-h-screen pb-10 pt-6'>
             <div className='grid grid-cols-12 '>

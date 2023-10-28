@@ -6,8 +6,9 @@ import { useReactToPrint } from 'react-to-print';
 
 
 const SpecificCoures = () => {
-    const {name,img,body,price,titel}=useLoaderData()
+    const {name,img,body,price,titel,codeid}=useLoaderData()
     const {user}=useContext(AuthContext)
+    console.log(useLoaderData())
     
     const componentRef = useRef();
 
@@ -36,7 +37,7 @@ const SpecificCoures = () => {
     <div className="card-actions justify-end mt-7 md:mt-10">
       <div></div>
       <Link><button onClick={handlePrint} className="btn btn-primary">Print</button></Link>
-      <Link to='/checkout'><button className="btn md:ml-5 btn-primary">CheckOut</button></Link>
+      <Link to={`/chackout/${codeid}`}><button className="btn md:ml-5 btn-primary">CheckOut</button></Link>
     </div>
   </div>
 </div>

@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaFacebook, FaGoogle } from 'react-icons/fa';
 import { ToastContainer, toast } from 'react-toastify';
   import 'react-toastify/dist/ReactToastify.css';
@@ -8,6 +8,9 @@ import { ToastContainer, toast } from 'react-toastify';
 const SingUp = () => {
     const {createEamilPassword,loginwithgoogle,updataData}=useContext(AuthContext)
     const [error,setError]=useState("")
+    const location=useLocation()
+  const navigate=useNavigate()
+  const from=location.state?.from?.pathname || '/'
    
 
 
@@ -29,6 +32,7 @@ const SingUp = () => {
       toast("Sing Up Sucessfully");
       profileupdate(name,photourl,)
       form.reset()
+      navigate(from,{replace:true})
       
     })
     .catch(error=>{console.log(error)
@@ -48,6 +52,7 @@ const SingUp = () => {
         toast('You Sing Up Successfully');
         
         console.log(user)
+        navigate(from,{replace:true})
         
         
        

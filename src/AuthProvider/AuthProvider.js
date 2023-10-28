@@ -9,6 +9,7 @@ const provider= new GoogleAuthProvider()
 
 const AuthProvider = ({children}) => {
 const [user,setUser]=useState('')
+const [loding,setLoading]=useState(true)
 
 // create Eamil password
 const createEamilPassword=(email,password)=>{
@@ -43,6 +44,7 @@ const createEamilPassword=(email,password)=>{
       setUser(currentUser)
       // setLoading(false)
       console.log(currentUser)
+      setLoading(false)
     })
     return ()=> unSubcriber
   },[])
@@ -54,6 +56,7 @@ const createEamilPassword=(email,password)=>{
         loginwithgoogle,
         logOut,
         updataData,
+        loding
 
     }
     return (

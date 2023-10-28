@@ -11,7 +11,7 @@ const Home = () => {
      
    return (
         <div>
-          <div className='bg-gradient-to-b from-black to-gray-800 lg:flex lg:justify-between md:flex md:justify-between pb-10'>
+          <div className='bg-gradient-to-b from-black to-gray-800 lg:flex lg:justify-between md:flex md:justify-between '>
             <div className='h-96 lg:mt-48 md:mt-44 pt-12  lg:ml-10 md:ml-10 ml-3 mr-2 align-middle '>
                 <p className='text-white text-3xl  '>Expand your career opportunities  <br /> with <span className='text-white'><span style={{ color: 'white', fontWeight: '' }}>
           {/* Style will be inherited from the parent element */}
@@ -35,7 +35,7 @@ Its simple syntax and readability make it perfect for Flask, Django, <br /> data
                 
 
             </div>
-            <div className='flex justify-center md:mt-32 lg:mt-12'>
+            <div className='flex justify-center md:mt-24 lg:mt-5 mt-5 pb-14'>
             <SideAnimation></SideAnimation>
             </div>
           </div>

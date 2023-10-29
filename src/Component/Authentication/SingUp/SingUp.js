@@ -13,7 +13,7 @@ const SingUp = () => {
   const from=location.state?.from?.pathname || '/'
    
 
-
+  
     const singUpinPassword=(event)=>{
         event.preventDefault()
         const form =event.target

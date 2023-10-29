@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
 
 const Navber = () => {
-  const {logOut,user}=useContext(AuthContext)
+  const {logOut,user,orderData}=useContext(AuthContext)
+  // console.log(orderData)
 
   const logoutHandler=()=>{
     logOut()
@@ -29,6 +30,10 @@ const Navber = () => {
         <li className='text-white'><Link to='/aboutus'>About Us</Link>
         </li>
         {
+          orderData && <li className='text-white'><Link to='/myclass'>MyClass</Link>
+          </li>
+        }
+        {
           user?.uid?<button onClick={logoutHandler} className='text-white'>
           Log Out
          </button>:<>
@@ -52,6 +57,10 @@ const Navber = () => {
         <li className='text-white' ><Link to='/Blogs'>Blogs</Link></li>
         <li className='text-white'><Link to='/aboutus'>About Us</Link>
         </li>
+        {
+           <li className='text-white'><Link to='/myclass'>MyClass</Link>
+          </li>
+        }
         
         {
           user?.uid?<button onClick={logoutHandler} className='text-white'>

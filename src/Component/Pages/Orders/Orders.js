@@ -38,12 +38,12 @@ const Orders = () => {
       })
     }
     return (
-        <div className='min-h-screen bg-gradient-to-b from-black to-gray-800'>
+        <div className='min-h-screen bg-gradient-to-b from-black to-gray-800 pt-10'>
            <div className='min-h-screen bg-gradient-to-b from-black to-gray-800 pt-10 flex justify-center  '>
             <div className="card lg:card-side lg:grid lg:grid-cols-12   shadow-xl pb-10">
                 <div className='lg:col-span-6 flex justify-center'>
                     <div className='bg-slate-600 w-2/3 h-96 '>
-                    <figure><img src={img} className=' mt-20 w-80 ' alt="Album"/></figure>
+                    <figure><img src={img} className=' mt-8 w-80 h-80' alt="Album"/></figure>
                     
 
                     </div>
@@ -56,7 +56,10 @@ const Orders = () => {
    <div >
    <h2 className=" text-white text-2xl mb-2">{name}</h2>
     <p className='text-white text-xl mb-2'>{titel}</p>
-    <p className='text-white mb-2 text-xl'> Price:  <span className='text-xl' >৳ </span>{price}</p>
+    <p className='text-white mb-2 text-xl'> Price:  <span 
+    className='text-xl' >৳ </span>{price}</p>
+    <p className='text-white mb-2 text-xl'>Your Name: {user?.displayName}</p>
+    <p className='text-white mb-2 text-xl'>YourEmail: {user?.email}</p>
     <button onClick={paymentHanlder} className='btn btn-primary mt-10'>Payment</button>
   
    </div>

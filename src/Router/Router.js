@@ -11,6 +11,9 @@ import Orders from "../Component/Pages/Orders/Orders";
 import SuccessFullPayment from "../Component/Pages/Course/SuccessFullPayment/SuccessFullPayment";
 import FailPayment from "../Component/Pages/Course/SuccessFullPayment/FailPayment";
 import PrivetRoute from "./PrivetRoute";
+import MyClass from "../Component/Pages/MyClass/MyClass";
+import ShowCartCoures from "../Component/Pages/Course/ShowCartCoures/ShowCartCoures";
+import ShowMyClass from "../Component/Pages/MyClass/ShowMyClass";
 
 
 
@@ -32,6 +35,8 @@ const router =createBrowserRouter([
     {path:'/aboutus',element:<AboutUs></AboutUs>},
     {path:'/payment/sucess/:tranId',element:<SuccessFullPayment></SuccessFullPayment>},
     {path:'/payment/fail/:tranId',element:<FailPayment></FailPayment>},
+    {path:'/myclass',element:<PrivetRoute><MyClass></MyClass></PrivetRoute>},
+    {path:'/myclass/cart',element:<ShowMyClass></ShowMyClass>},
     
     ]}
 ])

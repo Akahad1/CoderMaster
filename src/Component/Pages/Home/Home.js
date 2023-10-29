@@ -38,6 +38,7 @@ Its simple syntax and readability make it perfect for Flask, Django, <br /> data
             <div className='flex justify-center md:mt-24 lg:mt-5 mt-5 pb-14'>
             <SideAnimation></SideAnimation>
             </div>
+            
           </div>
             
         </div>

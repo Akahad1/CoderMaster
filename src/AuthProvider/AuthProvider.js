@@ -7,9 +7,12 @@ export const AuthContext =createContext()
 const auth = getAuth(app)
 const provider= new GoogleAuthProvider()
 
+
 const AuthProvider = ({children}) => {
 const [user,setUser]=useState('')
 const [loding,setLoading]=useState(true)
+const [SpecificClass,setSpecificClass]=useState('')
+console.log(SpecificClass)
 
 // create Eamil password
 const createEamilPassword=(email,password)=>{
@@ -49,6 +52,12 @@ const createEamilPassword=(email,password)=>{
     return ()=> unSubcriber
   },[])
 
+  
+  
+  
+
+  
+
     const authInfo={
         user,
         createEamilPassword,
@@ -56,7 +65,10 @@ const createEamilPassword=(email,password)=>{
         loginwithgoogle,
         logOut,
         updataData,
-        loding
+        loding,
+        SpecificClass,
+        setSpecificClass
+
 
     }
     return (

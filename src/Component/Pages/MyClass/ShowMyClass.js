@@ -8,7 +8,7 @@ const ShowMyClass = () => {
 
     const [classDatas,setClassData]=useState([])
     useEffect(()=>{
-        fetch(`http://localhost:5000/class?myclass=${SpecificClass}`)
+        fetch(`https://coder-master-server-b6ai6s7ms-akahad1.vercel.app/class?myclass=${SpecificClass}`)
         .then(res=>res.json())
         .then(data=>setClassData(data))
     },[SpecificClass])

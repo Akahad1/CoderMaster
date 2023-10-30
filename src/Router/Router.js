@@ -25,10 +25,10 @@ const router =createBrowserRouter([
         {path:'/allcoures/:id',element:<PrivetRoute>
             <SpecificCoures></SpecificCoures>
         </PrivetRoute>,
-        loader:async({params})=>fetch(`http://localhost:5000/allcoures/${params.id}`)
+        loader:async({params})=>fetch(`https://coder-master-server-b6ai6s7ms-akahad1.vercel.app/allcoures/${params.id}`)
     },
         {path:'/chackout/:id',element:<PrivetRoute><Orders></Orders></PrivetRoute>,
-        loader:async({params})=>fetch(`http://localhost:5000/allcoures/${params.id}`)
+        loader:async({params})=>fetch(`https://coder-master-server-b6ai6s7ms-akahad1.vercel.app/allcoures/${params.id}`)
     },
     {path:'/singup',element:<SingUp></SingUp>},
     {path:'/login',element:<Singin></Singin>},

@@ -15,7 +15,7 @@ const Orders = () => {
         price,
         
       }
-      fetch('http://localhost:5000/orders',{
+      fetch('https://coder-master-server-b6ai6s7ms-akahad1.vercel.app/orders',{
           method:"POST",
           headers:{
               "content-type" : 'application/json'

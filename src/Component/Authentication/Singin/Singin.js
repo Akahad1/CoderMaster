@@ -30,7 +30,7 @@ const Singin = () => {
 
             }
 
-            fetch('http://localhost:5000/jwt',{
+            fetch('https://coder-master-server-b6ai6s7ms-akahad1.vercel.app/jwt',{
               method:"POST",
               headers:{
                 'content-type' : 'application/json'

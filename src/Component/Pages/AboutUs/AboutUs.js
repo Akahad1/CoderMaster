@@ -6,7 +6,7 @@ import Loader from '../../Hook/Loader';
 const AboutUs = () => {
     const {data:instactors=[],isLoading}=useQuery({
         queryKey:['Instructor'],
-        queryFn:()=>fetch('http://localhost:5000/instactor')
+        queryFn:()=>fetch('https://coder-master-server-b6ai6s7ms-akahad1.vercel.app/instactor')
         .then(res=>res.json())
     })
     if(isLoading){

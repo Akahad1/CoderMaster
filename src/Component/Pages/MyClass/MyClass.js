@@ -10,7 +10,7 @@ const MyClass = () => {
     const {user,SpecificClass,setSpecificClass,logOut}=useContext(AuthContext)
     console.log(SpecificClass)
     useEffect(()=>{
-        fetch(`http://localhost:5000/orders?email=${user?.email}`,{
+        fetch(`https://coder-master-server-b6ai6s7ms-akahad1.vercel.app/orders?email=${user?.email}`,{
           headers:{
             authraization:`Bearer ${localStorage.getItem('CoderMaster')}`
           }

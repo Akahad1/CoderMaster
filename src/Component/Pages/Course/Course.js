@@ -10,7 +10,7 @@ const Course = () => {
       
     const {data:allcoures=[],isLoading}=useQuery({
         queryKey:['allcoures'],
-        queryFn: ()=>fetch('http://localhost:5000/allcoures')
+        queryFn: ()=>fetch('https://coder-master-server-b6ai6s7ms-akahad1.vercel.app/allcoures')
         .then(res=>res.json())
         
     })

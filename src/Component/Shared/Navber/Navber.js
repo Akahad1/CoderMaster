@@ -30,7 +30,7 @@ const Navber = () => {
         <li className='text-white'><Link to='/aboutus'>About Us</Link>
         </li>
         {
-          orderData && <li className='text-white'><Link to='/myclass'>MyClass</Link>
+          <li className='text-white'><Link to='/myclass'>MyClass</Link>
           </li>
         }
         {

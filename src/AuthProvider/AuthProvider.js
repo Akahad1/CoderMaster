@@ -19,6 +19,7 @@ const createEamilPassword=(email,password)=>{
     return createUserWithEmailAndPassword(auth, email, password)
 
 }
+
   // LogIN
 
   const login=(email,password)=>{
@@ -32,6 +33,7 @@ const createEamilPassword=(email,password)=>{
   }
 
   const logOut=()=>{
+    localStorage.removeItem('CoderMaster')
     return signOut(auth)
   }
   // update data

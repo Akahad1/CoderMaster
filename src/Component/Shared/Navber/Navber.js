@@ -26,7 +26,7 @@ const Navber = () => {
         <div>
       <li className='text-white' ><Link to='/'>Home</Link></li>
         <li className='text-white' ><Link to='/coures'>Coures</Link></li>
-        <li className='text-white' ><Link to='/Blogs'>Blogs</Link></li>
+        
         <li className='text-white'><Link to='/aboutus'>About Us</Link>
         </li>
         {
@@ -48,13 +48,13 @@ const Navber = () => {
       </ul>
     </div>
     {/* lg: */}
-    <a className="btn btn-ghost normal-case text-xl text-white">Coder Master</a>
+    <a className="btn btn-ghost font normal-case text-xl text-white">Coder Master</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
     <li className='text-white ' ><Link to='/'>Home</Link></li>
         <li className='text-white' ><Link to='/coures'>Coures</Link></li>
-        <li className='text-white' ><Link to='/Blogs'>Blogs</Link></li>
+       
         <li className='text-white'><Link to='/aboutus'>About Us</Link>
         </li>
         {

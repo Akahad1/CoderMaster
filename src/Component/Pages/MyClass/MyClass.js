@@ -7,18 +7,30 @@ import Loader from '../../Hook/Loader';
 const MyClass = () => {
     const [orders,setoders]=useState([])
     const [loder,setloder]=useState(true)
-    const {user,SpecificClass,setSpecificClass}=useContext(AuthContext)
+    const {user,SpecificClass,setSpecificClass,logOut}=useContext(AuthContext)
     console.log(SpecificClass)
     useEffect(()=>{
-        fetch(`http://localhost:5000/orders?email=${user?.email}`)
-        .then(res=>res.json())
+        fetch(`http://localhost:5000/orders?email=${user?.email}`,{
+          headers:{
+            authraization:`Bearer ${localStorage.getItem('CoderMaster')}`
+          }
+        })
+        .then(res=>{
+          if(res.status === 401 || res.status ===403){
+            return logOut()
+
+          }
+          return res.json()
+         
+        })
         .then(data=>{
             console.log(data)
             setoders(data)
             setloder(false)
         })
 
-    },[user?.email])
+    },[user?.email,logOut])
+    console.log(process.env.REACT_APP_apiKey)
 
     if(loder){
       return <Loader></Loader>
@@ -26,7 +38,7 @@ const MyClass = () => {
     return (
         <div className=' min-h-screen bg-gradient-to-b from-black to-gray-800'>
             {
-                orders<1? <p className='text-white text-center text pt-32 text-3xl'> You have not purchased any classes</p>:<div className="overflow-x-auto pt-5">
+                orders<1? <p className='text-white text-center text pt-32 text-3xl'> YOU HAVE NOT PURCHASED ANY CLASSES. </p>:<div className="overflow-x-auto pt-5">
                 <table className="table w-full">
                   
                   <thead>
